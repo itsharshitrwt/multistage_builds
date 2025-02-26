@@ -9,18 +9,16 @@ import (
 )
 
 func main() {
-	fmt.Println("Hi Abhishek.Veeramalla, I am a calculator app ....")
+	fmt.Println("Hi harshit Rawat, This is a calculator app ....")
 
 	for {
-		// Read input from the user
+		
 		reader := bufio.NewReader(os.Stdin)
 		fmt.Print("Enter any calculation (Example: 1 + 2 (or) 2 * 5 -> Please maintain spaces as shown in example): ")
 		text, _ := reader.ReadString('\n')
 
-		// Trim the newline character from the input
 		text = strings.TrimSpace(text)
 
-		// Check if the user entered "exit" to quit the program
 		if text == "exit" {
 			break
 		}
@@ -32,7 +30,6 @@ func main() {
 			continue
 		}
 
-		// Convert the operands to integers
 		left, err := strconv.Atoi(parts[0])
 		if err != nil {
 			fmt.Println("Invalid input. Try again.")
@@ -44,7 +41,6 @@ func main() {
 			continue
 		}
 
-		// Perform the calculation based on the operator
 		var result int
 		switch parts[1] {
 		case "+":
